@@ -13,4 +13,4 @@ export const rulesList = [
   'unordered_list',
   'ordered_list',
   'blockquote' 
-] as const
+] as const;

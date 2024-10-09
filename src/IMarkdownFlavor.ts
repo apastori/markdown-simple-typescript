@@ -1,3 +1,4 @@
 export interface IMarkdownFlavor {
-    name: ""
+    name: "",
+    strict: boolean
 }

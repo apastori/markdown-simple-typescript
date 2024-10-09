@@ -1,0 +1,1 @@
+export const baseHeaderRegexPattern = `/^#{}\s?([^\n]+)/gm` as const;

@@ -1,1 +1,1 @@
-export type MarkdownSpecialChars = '*' | '_' | '#' | '>'
+export type MarkdownSpecialChars = '*' | '_' | '#' | '>';
