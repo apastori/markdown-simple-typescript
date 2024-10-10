@@ -7,4 +7,4 @@ export const headersPatternList: baseHeaderRegexPattern[] = [
     "/^#{4}s?([^\n]+)/gm",
     "/^#{5}s?([^\n]+)/gm",
     "/^#{6}s?([^\n]+)/gm"
-]
+] as const;
