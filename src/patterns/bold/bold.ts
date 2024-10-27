@@ -1,6 +1,6 @@
 import { Pattern } from "../Pattern";
 import { boldRegexPattern } from "./boldRegexPattern";
-import { toRegex } from "./toRegex";
+import { toRegex } from "../toRegex";
 import { isBoldRegex } from "./isBoldRegex";
 import { IPattern } from "../IPattern";
 

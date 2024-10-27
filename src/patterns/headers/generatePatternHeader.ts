@@ -1,4 +1,4 @@
-import { Pattern } from "../Pattern";
+import { Pattern } from "../classes/Pattern";
 import { numberHeaders } from "./numberHeadersType";
 import { toRegex } from "./toRegex";
 import { isBaseHeaderRegex } from "./isBaseHeaderRegex";
