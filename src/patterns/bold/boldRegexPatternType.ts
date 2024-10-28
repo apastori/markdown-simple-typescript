@@ -1,1 +1,1 @@
-export type boldRegexPatternType = "/\*\*\s?([^\n]+)\*\*/g" | "/\_\_\s?([^\n]+)\_\_/g";
+export type boldRegexPatternType = "\\*\\*\\s?([^\\n]+)\\*\\*" | "\\_\\_\\s?([^\\n]+)\\_\\_";

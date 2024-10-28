@@ -1,11 +1,11 @@
-import { Pattern } from "../classes/Pattern";
-import { numberHeaders } from "./numberHeadersType";
-import { toRegex } from "./toRegex";
+import { Pattern } from "../Pattern";
+import { numberHeaders } from "../../types/numberHeadersType";
+import { toRegex } from "../toRegex";
 import { isBaseHeaderRegex } from "./isBaseHeaderRegex";
 
 export const generatePatternHeader = (number: numberHeaders) => {
-    const baseRegExpStr = `/^#{${number.toString()}}\s?([^\n]+)/gm`;
-    const regExp = toRegex(baseRegExpStr);
+    const baseRegExpStr = `^#{${number.toString()}}s?([^\\n]+)`;
+    const regExp = toRegex(baseRegExpStr, "gm");
     if (!isBaseHeaderRegex(baseRegExpStr)) {
         throw new Error(`regex pattern: ${baseRegExpStr} does not fit header regex`);
     }

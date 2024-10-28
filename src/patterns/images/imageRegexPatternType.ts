@@ -1,1 +1,1 @@
-export type imageRegexPatternType = "/\!\[([^\]]+)\]\((\S+)\)/g"
+export type imageRegexPatternType = "!\\[([^\\]]+)\\]\\((\\S+)\\)"

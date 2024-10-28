@@ -1,1 +1,1 @@
-export type italicRegexPatternType = "/\*\s?([^\n]+)\*/g" | "/\_\s?([^\n]+)\_/g";
+export type italicRegexPatternType = "\\*\\s?([^\\n]+)\\*" | "\\_\\s?([^\\n]+)\\_";

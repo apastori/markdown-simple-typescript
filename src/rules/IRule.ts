@@ -1,5 +1,5 @@
 import { rule } from "./ruleType";
-import { IPattern } from "./IPattern";
+import { IPattern } from "../patterns/IPattern";
 
 export interface IRule {
     name: rule,

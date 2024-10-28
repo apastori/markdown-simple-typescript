@@ -1,7 +1,7 @@
 import { imageRegexPatternType } from "./imageRegexPatternType";
 
 const imageRegexPattern: imageRegexPatternType[] = [
-    "/\!\[([^\]]+)\]\((\S+)\)/g"
+    "!\\[([^\\]]+)\\]\\((\\S+)\\)"
 ];
 
 export { imageRegexPattern }

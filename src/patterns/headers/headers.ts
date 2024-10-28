@@ -1,6 +1,6 @@
 import { IPattern } from "../IPattern";
 import { generatePatternHeader } from "./generatePatternHeader";
-import { numberHeaders } from "./numberHeadersType";
+import { numberHeaders } from "../../types/numberHeadersType";
 
 const headers: IPattern[]  = []
 

@@ -1,6 +1,6 @@
-import { numberHeaders } from "./numberHeadersType";
+import { numberHeaders } from "../../types/numberHeadersType";
 import { baseHeaderRegexPattern } from "./baseHeaderRegexPattern";
 
 type baseHeader = typeof baseHeaderRegexPattern;
 
-export type baseHeaderRegexPattern = `/^#{${numberHeaders}}\s?([^\n]+)/gm`;
+export type baseHeaderRegexPattern = `^#{${numberHeaders}}s?([^\\n]+)`;
