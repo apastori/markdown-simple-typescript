@@ -4,5 +4,5 @@ import { IPattern } from "../patterns/IPattern";
 export interface IRule {
     name: rule,
     patterns: IPattern[],
-    convert(raw: string): string
+    apply(raw: string): string
 };

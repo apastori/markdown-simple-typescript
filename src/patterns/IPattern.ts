@@ -1,5 +1,5 @@
 export interface IPattern {
     regex: RegExp,
     replacement: string,
-    convert(raw: string): string
+    apply(raw: string): string
 };

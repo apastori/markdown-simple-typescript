@@ -1,3 +1,3 @@
-import * as patterns from "./patterns/patterns"
+import { headerRules } from "./rules/rules";
 
-console.log(patterns);
+console.log(headerRules);

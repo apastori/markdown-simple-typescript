@@ -10,9 +10,9 @@ export class Rule implements IRule {
     this.patterns = patterns;
   };
 
-  convert(raw: string): string {
+  apply(raw: string): string {
     return this.patterns.reduce(
-      (result, pattern) => pattern.convert(result),
+      (result, pattern) => pattern.apply(result),
       raw
     );
   };

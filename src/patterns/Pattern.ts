@@ -8,7 +8,7 @@ export class Pattern implements IPattern {
       this.replacement = replacement;
     };
   
-    convert(raw: string): string {
+    apply(raw: string): string {
       return raw.replace(this.regex, this.replacement);
     };
 };
