@@ -1,3 +1,3 @@
-import { numberHeaders } from "./numberHeadersType";
+import { numberHeaders } from "./numberHeadersType"
 
-export type numberHeadersStr = `${numberHeaders}`;
+export type numberHeadersStr = `${numberHeaders}`

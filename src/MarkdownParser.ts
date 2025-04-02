@@ -18,7 +18,7 @@ export class MarkdownParser implements IMarkdownParser {
     render(raw: string): string {
         let result = raw;
         this.rules.forEach((rule) => {
-        result = rule.apply(result);
+            result = rule.apply(result);
         });
         return result;
     }

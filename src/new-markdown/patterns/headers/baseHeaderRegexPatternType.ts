@@ -3,4 +3,5 @@ import { baseHeaderRegexPattern } from "./baseHeaderRegexPattern";
 
 type baseHeader = typeof baseHeaderRegexPattern;
 
-export type baseHeaderRegexPattern = `^#{${numberHeaders}}\\s+([^\\n]+)`;
+export type baseHeaderRegexPattern = `^#{${numberHeaders}}\\s?([^\\n]+)`;
+

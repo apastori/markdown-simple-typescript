@@ -1,1 +1,1 @@
-export type regexString = `/${string}/`;
+export type regexString = `/${string}/`

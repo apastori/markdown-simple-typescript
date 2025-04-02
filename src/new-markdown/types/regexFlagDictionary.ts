@@ -1,5 +1,5 @@
-import { RegexFlags } from "./regexFlagType"
-import { EmptyString } from "./emptyStringType"
+import { RegexFlags } from "./regexFlagType";
+import { EmptyString } from "./emptyStringType";
 
 export interface RegexFlagDict {
     regexPattern: string,

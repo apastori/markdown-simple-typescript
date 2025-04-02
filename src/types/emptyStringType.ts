@@ -1,1 +1,1 @@
-export type EmptyString = '';
+export type EmptyString = ''

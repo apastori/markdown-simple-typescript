@@ -1,1 +1,1 @@
-export const baseHeaderRegexPattern = `^#{}s?([^\\n]+)` as const;
+export const baseHeaderRegexPattern = `^#{${""}}\\s+([^\\n]+)` as const;
