@@ -1,7 +1,7 @@
 import { numberHeaders } from "../../../types/numberHeadersType"
 import { RuleTokenizer } from "../../RuleTokenizer"
 import { baseHeaderRegexPattern } from "./baseHeaderRegexPatternType"
-import { generateRuleHeader } from "./generatePatternHeader"
+import { generateRuleHeader } from "./generateRuleHeader"
 import { headersPatternList } from './headersPatternsList'
 
 const headers: RuleTokenizer[]  = []

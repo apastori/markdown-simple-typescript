@@ -1,1 +1,0 @@
-export type boldRegexPatternType = "\\*\\*([^\\s\\n]+)\\*\\*" | "\\_\\_([^\\s\\n]+)\\_\\_";

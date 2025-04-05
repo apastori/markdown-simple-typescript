@@ -7,6 +7,8 @@ interface MarkdownToken {
   content?: string
   // Position tracking
   line: number
+  //level for headings
+  level?: number
 }
 
 export { MarkdownToken }

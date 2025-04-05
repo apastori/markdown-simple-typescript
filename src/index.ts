@@ -1,3 +1,8 @@
-import { headerRules } from "./rules/rules";
+import { MarkdownTokenizer } from "./tokenization/MarkdownTokenizer"
+import { UnixLinuxNewMacEOL } from "./EOLConfigs"
 
-console.log(headerRules);
+console.log("MarkdownTokenizer")
+
+const text: string = "#          Header1\n## Titulo2"
+
+console.log(new MarkdownTokenizer({ input: text, EOLConfig: UnixLinuxNewMacEOL }))

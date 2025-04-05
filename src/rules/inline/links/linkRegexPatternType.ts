@@ -1,1 +1,0 @@
-export type linkRegexPatternType = "\\[([^\\n]+)\\]\\(([^\\n]+)\\)"
