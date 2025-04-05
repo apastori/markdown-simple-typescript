@@ -1,5 +1,5 @@
 import { headerRules, boldRules, italicRules, imageRules, linkRules } from "./rules/rules"
-import { Rule } from "./rules/Rule"
+import { Rule } from "./rules/RuleTokenizer"
 
 const rules: Rule[] = []
 

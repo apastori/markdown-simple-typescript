@@ -17,3 +17,6 @@ The Markup Lenguage would render # Title and #       Title as headers h1, but no
 # Title
 
 + ** Bold** would be rendered 
+
+
+** Implementar que texto input tenga hasta tres espacios adelante del input verdad

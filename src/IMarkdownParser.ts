@@ -1,4 +1,4 @@
-import { Rule } from "./rules/Rule"
+import { Rule } from "./rules/RuleTokenizer"
 
 export interface IMarkdownParser {
     rules: Rule[],

@@ -1,0 +1,1 @@
+export type EOLCharacter = '\n' | '\r\n' | '\r'

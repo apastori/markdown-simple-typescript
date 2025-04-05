@@ -1,1 +1,1 @@
-export type RegexFlags = 'g' | 'i' | 'm' | 's' | 'u' | 'y';
+export type RegexFlags = 'g' | 'i' | 'm' | 's' | 'u' | 'y'
