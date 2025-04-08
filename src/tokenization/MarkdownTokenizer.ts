@@ -15,8 +15,8 @@ class MarkdownTokenizer {
       input: string,
       EOLConfig: EOLConfig
     }) {
-      this.input = input
       this.EolConfig = EOLConfig
+      this.input = this.convertEOLtoLineFeed(input)
       this.rules = this.getOrderedRules(RulesTokenizer)
       this.tokens = this.generateTokens()
     }
@@ -49,45 +49,65 @@ class MarkdownTokenizer {
     }
 
     private generateTokens(): MarkdownToken[] {
-      const lines: string[] = this.separateByEOL()
-      const tokens: MarkdownToken[] = [] 
+      const lines: string[] = this.separateByLineFeed()
+      const tokens: MarkdownToken[] = []
+      let numberTokens: number = 1
       lines.map((line: string, linePosition: number) => {
-        let i = 0
-        let lineNotToken: boolean = false
-        while (i <= this.getRules().length && !lineNotToken) {
+        let i: number = 0
+        let lineToken: boolean = false
+        while (i < this.getRules().length && !lineToken) {
           const ruleTokenization: RuleTokenizer = this.getRules()[i] as RuleTokenizer
-          const match: RegExpMatchArray | null = line.match(ruleTokenization.getRegex())
-          if (match) {
-            let newToken: MarkdownToken
-            if (ruleTokenization.getName() === 'heading') {
-                newToken = {
-                  line: linePosition + 1,
-                  type: ruleTokenization.getName(),
-                  //1 index because is first capture group
-                  content: match[1] as string,
-                  //level for heading
-                  level: ruleTokenization.getLevel()
-                }
-            } else {
-                newToken = {
-                  line: linePosition + 1,
-                  type: ruleTokenization.getName(),
-                  //1 index because is first capture group
-                  content: match[1] as string
-                }
+          let j: number = 0
+          while (j < ruleTokenization.getRegex().length && !lineToken) {
+            const match: RegExpMatchArray | null = line.match(ruleTokenization.getRegex()[j] as RegExp)
+            if (match) {
+              let newToken: MarkdownToken
+              if (ruleTokenization.getName() === 'heading') {
+                  newToken = {
+                    id: numberTokens,
+                    type: ruleTokenization.getName(),
+                    //1 index because is first capture group
+                    content: match[1] as string,
+                    //level for heading
+                    level: ruleTokenization.getLevel(),
+                    line: linePosition + 1
+                  }
+              } else {
+                  newToken = {
+                    line: numberTokens,
+                    id: numberTokens,
+                    type: ruleTokenization.getName(),
+                    //1 index because is first capture group
+                    content: match[1] as string
+                  }
+              }
+              tokens.push(newToken)
+              numberTokens++
+              lineToken = true
+              continue  
             }
-            tokens.push(newToken)
-            lineNotToken = true
-            continue
+            j++
           }
+          if (lineToken) continue
           i++
         }
       })
       return tokens
     }
+
+    private convertEOLtoLineFeed(input: string): string {
+      if (this.getEOLConfigPattern() === "\n") return input
+      if (this.getEOLConfigPattern() === "\r\n") return input.replace(/\r\n/g, '\n')
+      if (this.getEOLConfigPattern() === "\r") return input.replace(/\r/g, '\n')
+      throw new Error("EOL Config contains unconsidered pattern")
+    }
     
     private separateByEOL(): string[] {
       return this.getInput().split(this.getEOLConfigPattern())
+    }
+
+    private separateByLineFeed(): string[] {
+      return this.getInput().split('\n')
     }
 }
 

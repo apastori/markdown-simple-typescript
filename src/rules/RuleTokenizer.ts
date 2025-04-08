@@ -4,12 +4,12 @@ import { IRuleTokenizer } from "./IRuleTokenizer"
 export class RuleTokenizer implements IRuleTokenizer {
     private readonly name: BlockTokenType
     private readonly orderId: number
-    private readonly regex: RegExp
+    private readonly regex: RegExp[]
     private readonly level?: number | undefined
     constructor({ name, orderId, regex, level }: {
       name: BlockTokenType
       orderId: number
-      regex: RegExp
+      regex: RegExp[]
       level?: number | undefined
     }) {
       this.name = name
@@ -23,7 +23,7 @@ export class RuleTokenizer implements IRuleTokenizer {
     getOrderId(): number {
       return this.orderId
     }
-    getRegex(): RegExp {
+    getRegex(): RegExp[] {
       return this.regex
     }
     getLevel(): number {

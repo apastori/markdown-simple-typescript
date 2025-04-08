@@ -1,3 +1,3 @@
 import { numberHeaders } from "../../../types/numberHeadersType"
 
-export type baseHeaderRegexPattern = `^#{${numberHeaders}}\\s+([^\\n]+)`
+export type baseHeaderRegexPattern = `^ {0,3}#{${numberHeaders}}\\s+([^\\n]+)`

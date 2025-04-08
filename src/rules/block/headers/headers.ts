@@ -8,7 +8,7 @@ const headers: RuleTokenizer[]  = []
 
 let i: numberHeaders = 1
 
-while (i < headersPatternList.length) {
+while (i <= headersPatternList.length) {
     const headerPattern: baseHeaderRegexPattern = headersPatternList[i - 1]!
     headers.push(generateRuleHeader(headerPattern, i))
     i++

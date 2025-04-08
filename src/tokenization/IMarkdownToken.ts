@@ -3,6 +3,7 @@ import { BlockTokenType } from "./BlockTokenType"
 
 interface MarkdownToken {
   // Core properties
+  id: number
   type: BlockTokenType
   content?: string
   // Position tracking
