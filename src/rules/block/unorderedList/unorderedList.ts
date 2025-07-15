@@ -13,7 +13,7 @@ for (let i: number = 0; i < unorderedListPatternList.length; i++) {
 
 const unorderedListRule: RuleTokenizer = new RuleTokenizer({
     name: 'unordered-list',
-    orderId: 3,
+    orderId: 4,
     regex: unorderedListRegex
 })
 
